@@ -75,7 +75,7 @@ export const MOCK_BUSINESSES: Business[] = [
     googleMapLink: '#',
     rating: 4.8,
     reviews: 15,
-    price: '8,000 Ks and up'0
+    price: '8,000 Ks and up'
   },
   {
     id: '7',

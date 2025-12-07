@@ -65,6 +65,7 @@ export const fetchBusinesses = async (): Promise<Business[]> => {
         googleMapLink: rawMap || '#',
         // 👇 ဒီလို price ကို map လုပ်ထားရမယ် – မင်း sheet header "price" နဲ့ညီတယ်
         price: getValue(['price', 'prices', 'cost']),
+        itemCode: getValue(['itemcode','code','item_code']),
         rating: parseFloat(getValue(['rating', 'stars'])) || 0,
         reviews: parseInt(getValue(['reviews', 'reviewcount'])) || 0
       };

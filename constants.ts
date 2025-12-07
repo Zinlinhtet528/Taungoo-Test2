@@ -11,7 +11,8 @@ export const MOCK_BUSINESSES: Business[] = [
     imageUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff70?w=500&q=80',
     googleMapLink: '#',
     rating: 4.8,
-    reviews: 120
+    reviews: 120,
+    price: '500,000 Ks and up'
   },
   {
     id: '2',
@@ -35,7 +36,8 @@ export const MOCK_BUSINESSES: Business[] = [
     imageUrl: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&q=80',
     googleMapLink: '#',
     rating: 4.7,
-    reviews: 45
+    reviews: 45,
+    price: '5,000 Ks and up'
   },
   {
     id: '4',
@@ -59,7 +61,8 @@ export const MOCK_BUSINESSES: Business[] = [
     imageUrl: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80',
     googleMapLink: '#',
     rating: 4.5,
-    reviews: 30
+    reviews: 30,
+    price: '150,000 Ks and up'
   },
   {
     id: '6',
@@ -71,7 +74,8 @@ export const MOCK_BUSINESSES: Business[] = [
     imageUrl: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&q=80',
     googleMapLink: '#',
     rating: 4.8,
-    reviews: 150
+    reviews: 15,
+    price: '8,000 Ks and up'0
   },
   {
     id: '7',
@@ -83,7 +87,8 @@ export const MOCK_BUSINESSES: Business[] = [
     imageUrl: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=500&q=80',
     googleMapLink: '#',
     rating: 4.3,
-    reviews: 40
+    reviews: 40,
+    price: '25,000 Ks and up'
   },
   {
     id: '8',
@@ -95,6 +100,7 @@ export const MOCK_BUSINESSES: Business[] = [
     imageUrl: 'https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=500&q=80',
     googleMapLink: '#',
     rating: 4.7,
-    reviews: 200
+    reviews: 200,
+    price: '3,000 Ks per bowl'
   }
 ];

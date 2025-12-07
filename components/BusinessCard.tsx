@@ -97,10 +97,9 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
 
 {business.itemCode && (
   <p className="text-xs font-bold text-blue-600 mb-2 font-burmese">
-    🏷 Item Code: {business.itemCode}
+    🏷 Item Code : {business.itemCode}
   </p>
 )}
-
 
         <div className="mt-auto space-y-2 mb-4">
           <div className="flex items-start gap-2 text-xs text-gray-600">

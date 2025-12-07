@@ -40,7 +40,7 @@ export const fetchBusinesses = async (): Promise<Business[]> => {
       return MOCK_BUSINESSES;
     }
 
-    return parsedData.map(row => {
+       return parsedData.map(row => {
       // Helper to find data regardless of exact column name
       const getValue = (keys: string[]) => {
         for (const key of keys) {
@@ -62,10 +62,13 @@ export const fetchBusinesses = async (): Promise<Business[]> => {
         description: getValue(['description', 'about']) || '',
         imageUrl: getDirectImageUrl(rawImage),
         googleMapLink: rawMap || '#',
+        // 👇 ဒီလို price ကို map လုပ်ထားရမယ် – မင်း sheet header "price" နဲ့ညီတယ်
+        price: getValue(['price', 'prices', 'cost']),
         rating: parseFloat(getValue(['rating', 'stars'])) || 0,
         reviews: parseInt(getValue(['reviews', 'reviewcount'])) || 0
       };
     });
+
 
   } catch (error) {
     console.error('Error loading data from Google Sheets:', error);

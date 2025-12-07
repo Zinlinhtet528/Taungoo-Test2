@@ -59,6 +59,7 @@ export const fetchBusinesses = async (): Promise<Business[]> => {
         category: matchCategory(rawCategory),
         address: getValue(['address', 'location']) || '',
         phone: getValue(['phone', 'contact', 'tel']) || '',
+        viber: getValue(['viber', 'vibercontact', 'viberphone']),
         description: getValue(['description', 'about']) || '',
         imageUrl: getDirectImageUrl(rawImage),
         googleMapLink: rawMap || '#',

@@ -93,6 +93,11 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
           <p className="text-xs font-semibold text-emerald-600 mb-2 font-burmese">
             💰 စျေးနှုန်း: {business.price}
           </p>
+      {business.itemCode && (
+  <p className="text-xs text-blue-700 font-medium mb-2 font-burmese">
+    🏷 Item Code : {business.itemCode}
+  </p>
+
         )}
 
         <div className="mt-auto space-y-2 mb-4">

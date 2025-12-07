@@ -2,7 +2,6 @@ export interface Business {
   id: string;
   name: string;
   category: Category;
-  price: Price;
   address: string;
   phone: string;
   description: string;
@@ -10,6 +9,7 @@ export interface Business {
   googleMapLink: string;
   rating: number;
   reviews: number;
+  price?: string; // NEW: price field from Google Sheet (e.g. "5000 Ks", "$10")
 }
 
 export enum Category {

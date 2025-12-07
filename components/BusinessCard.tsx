@@ -120,6 +120,14 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
             <MapPin className="h-3.5 w-3.5" />
             Map
           </a>
+          business.viber && (
+  <a
+    href={`viber://chat?number=${business.viber.replace(/^0/, "95")}`}
+    className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border border-purple-500 text-purple-600 text-xs font-semibold hover:bg-purple-500 hover:text-white transition-colors"
+  >
+    💜 Viber
+  </a>
+
         </div>
       </div>
     </div>

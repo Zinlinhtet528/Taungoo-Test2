@@ -4,6 +4,7 @@ export interface Business {
   category: Category;
   address: string;
   phone: string;
+  viber?: string;       // << NEW FIELD
   description: string;
   imageUrl: string;
   googleMapLink: string;

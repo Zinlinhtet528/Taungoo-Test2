@@ -34,8 +34,8 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
   };
 
   const hasImage = business.imageUrl && business.imageUrl.trim() !== '';
-
-  const imageSrc = !hasImage || imgError ? getFallbackImage(business.category) : business.imageUrl;
+  const imageSrc =
+    !hasImage || imgError ? getFallbackImage(business.category) : business.imageUrl;
 
   return (
     <div className="bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 flex flex-col h-full overflow-hidden">
@@ -89,17 +89,17 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
           {business.description}
         </p>
 
-       {business.price && (
-  <p className="text-xs font-semibold text-emerald-600 mb-2 font-burmese">
-    💰 စျေးနှုန်း: {business.price}
-  </p>
-)}
+        {business.price && (
+          <p className="text-xs font-semibold text-emerald-600 mb-2 font-burmese">
+            💰 စျေးနှုန်း: {business.price}
+          </p>
+        )}
 
-{business.itemCode && (
-  <p className="text-xs font-bold text-blue-600 mb-2 font-burmese">
-    🏷 Item Code : {business.itemCode}
-  </p>
-)}
+        {business.itemCode && (
+          <p className="text-xs font-bold text-blue-600 mb-2 font-burmese">
+            🏷 Item Code : {business.itemCode}
+          </p>
+        )}
 
         <div className="mt-auto space-y-2 mb-4">
           <div className="flex items-start gap-2 text-xs text-gray-600">
@@ -109,7 +109,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
         </div>
 
         {/* Action Buttons */}
-        <div className="grid grid-cols-2 gap-2 mt-auto">
+        <div className="grid grid-cols-3 gap-2 mt-auto">
           <a
             href={`tel:${business.phone}`}
             className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border border-primary/60 text-primary text-xs font-semibold hover:bg-primary hover:text-white transition-colors"
@@ -117,6 +117,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
             <Phone className="h-3.5 w-3.5" />
             Call
           </a>
+
           <a
             href={business.googleMapLink}
             target="_blank"
@@ -126,14 +127,15 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
             <MapPin className="h-3.5 w-3.5" />
             Map
           </a>
-  
-  <a
-    href={`viber://chat?number=${business.viber.replace(/^0/, "95")}`}
-    className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border border-purple-500 text-purple-600 text-xs font-semibold hover:bg-purple-500 hover:text-white transition-colors"
-  >
-    💜 Viber
-  </a>
 
+          {business.viber && (
+            <a
+              href={`viber://chat?number=${business.viber.replace(/^0/, '95')}`}
+              className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg border border-purple-500 text-purple-600 text-xs font-semibold hover:bg-purple-500 hover:text-white transition-colors"
+            >
+              💜 Viber
+            </a>
+          )}
         </div>
       </div>
     </div>

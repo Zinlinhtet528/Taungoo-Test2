@@ -4,13 +4,13 @@ export interface Business {
   category: Category;
   address: string;
   phone: string;
-  viber?: string;       // << NEW FIELD
   description: string;
   imageUrl: string;
   googleMapLink: string;
   rating: number;
   reviews: number;
-  price?: string; // price field from Google Sheet (e.g. "5000 Ks", "$10")
+  price?: string;
+  detail?: string; // New field for detail image URL or text
 }
 
 export enum Category {

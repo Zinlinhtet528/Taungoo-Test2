@@ -12,7 +12,8 @@ export const MOCK_BUSINESSES: Business[] = [
     googleMapLink: '#',
     rating: 4.8,
     reviews: 120,
-    price: '500,000 Ks and up'
+    price: 'Starting at 200,000 Ks',
+    detail: 'https://images.unsplash.com/photo-1556656793-02715d8dd660?w=600&q=80' // Mock detail (Promotion flyer)
   },
   {
     id: '2',
@@ -24,7 +25,9 @@ export const MOCK_BUSINESSES: Business[] = [
     imageUrl: 'https://images.unsplash.com/photo-1616530940355-351fabd9524b?w=500&q=80',
     googleMapLink: '#',
     rating: 4.9,
-    reviews: 85
+    reviews: 85,
+    price: '5,000 - 50,000 Ks',
+    detail: 'https://images.unsplash.com/photo-1522335789203-abd6538d8ad8?w=600&q=80'
   },
   {
     id: '3',
@@ -37,7 +40,7 @@ export const MOCK_BUSINESSES: Business[] = [
     googleMapLink: '#',
     rating: 4.7,
     reviews: 45,
-    price: '5,000 Ks and up'
+    price: 'Whole Sale Price'
   },
   {
     id: '4',
@@ -49,7 +52,8 @@ export const MOCK_BUSINESSES: Business[] = [
     imageUrl: 'https://images.unsplash.com/photo-1515488042361-25f4682ae2ed?w=500&q=80',
     googleMapLink: '#',
     rating: 4.6,
-    reviews: 60
+    reviews: 60,
+    price: 'Discount 10%'
   },
   {
     id: '5',
@@ -62,7 +66,7 @@ export const MOCK_BUSINESSES: Business[] = [
     googleMapLink: '#',
     rating: 4.5,
     reviews: 30,
-    price: '150,000 Ks and up'
+    detail: 'https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&q=80'
   },
   {
     id: '6',
@@ -74,8 +78,8 @@ export const MOCK_BUSINESSES: Business[] = [
     imageUrl: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&q=80',
     googleMapLink: '#',
     rating: 4.8,
-    reviews: 15,
-    price: '8,000 Ks and up'
+    reviews: 150,
+    price: 'New Arrival'
   },
   {
     id: '7',
@@ -87,8 +91,7 @@ export const MOCK_BUSINESSES: Business[] = [
     imageUrl: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=500&q=80',
     googleMapLink: '#',
     rating: 4.3,
-    reviews: 40,
-    price: '25,000 Ks and up'
+    reviews: 40
   },
   {
     id: '8',
@@ -101,6 +104,6 @@ export const MOCK_BUSINESSES: Business[] = [
     googleMapLink: '#',
     rating: 4.7,
     reviews: 200,
-    price: '3,000 Ks per bowl'
+    price: '3000 Ks per bowl'
   }
 ];

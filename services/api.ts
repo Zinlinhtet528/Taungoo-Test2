@@ -40,7 +40,7 @@ export const fetchBusinesses = async (): Promise<Business[]> => {
       return MOCK_BUSINESSES;
     }
 
-       return parsedData.map(row => {
+    return parsedData.map(row => {
       // Helper to find data regardless of exact column name
       const getValue = (keys: string[]) => {
         for (const key of keys) {
@@ -52,6 +52,7 @@ export const fetchBusinesses = async (): Promise<Business[]> => {
       const rawCategory = getValue(['category', 'type', 'cat']);
       const rawImage = getValue(['imageurl', 'image', 'photo', 'picture', 'img']);
       const rawMap = getValue(['googlemaplink', 'map', 'googlemap', 'locationlink']);
+      const rawDetail = getValue(['detail', 'details', 'promotion', 'flyer', 'info']);
 
       return {
         id: getValue(['id']) || Math.random().toString(36).substr(2, 9),
@@ -59,18 +60,15 @@ export const fetchBusinesses = async (): Promise<Business[]> => {
         category: matchCategory(rawCategory),
         address: getValue(['address', 'location']) || '',
         phone: getValue(['phone', 'contact', 'tel']) || '',
-        viber: getValue(['viber', 'vibercontact', 'viberphone']),
         description: getValue(['description', 'about']) || '',
         imageUrl: getDirectImageUrl(rawImage),
         googleMapLink: rawMap || '#',
-        // 👇 ဒီလို price ကို map လုပ်ထားရမယ် – မင်း sheet header "price" နဲ့ညီတယ်
-        price: getValue(['price', 'prices', 'cost']),
-        itemCode: getValue(['itemcode','code','item_code']),
         rating: parseFloat(getValue(['rating', 'stars'])) || 0,
-        reviews: parseInt(getValue(['reviews', 'reviewcount'])) || 0
+        reviews: parseInt(getValue(['reviews', 'reviewcount'])) || 0,
+        price: getValue(['price', 'cost', 'amount']),
+        detail: getDirectImageUrl(rawDetail) || rawDetail // Attempt to clean URL if it is one, otherwise keep text
       };
     });
-
 
   } catch (error) {
     console.error('Error loading data from Google Sheets:', error);

@@ -4,13 +4,14 @@ export interface Business {
   category: Category;
   address: string;
   phone: string;
+  viber?: string;
   description: string;
   imageUrl: string;
   googleMapLink: string;
   rating: number;
   reviews: number;
   price?: string;
-  detail?: string; // New field for detail image URL or text
+  detail?: string;
 }
 
 export enum Category {
@@ -19,9 +20,9 @@ export enum Category {
   MOBILE = 'Mobile Phone',
   ELECTRONICS = 'Electronics',
   COSMETICS = 'Cosmetics',
-  FASHION = 'Fashion', // Covers Women Clothes, Clothes
+  FASHION = 'Fashion',
   BABY = 'Baby Store',
-  ESSENTIALS = 'Rice & Oil', // Covers Rice, Cock Oil
+  ESSENTIALS = 'Rice & Oil',
   FURNITURE = 'Furniture'
 }
 

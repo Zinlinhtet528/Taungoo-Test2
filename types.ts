@@ -16,6 +16,9 @@ export interface Business {
 
 export enum Category {
   ALL = 'All',
+    ပဲအမျိုးမျိုး = 'ပဲအမျိုးမျိုး',
+ သစ်သီး = 'သစ်သီး',
+  ကုန်စိမ်း = 'ကုန်စိမ်း',
   RESTAURANT = 'Restaurant',
   MOBILE = 'Mobile Phone',
   ELECTRONICS = 'Electronics',

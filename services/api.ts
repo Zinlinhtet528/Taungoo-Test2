@@ -90,6 +90,9 @@ function matchCategory(inputString: string): Category {
   if (!inputString) return Category.FASHION;
   const normalized = inputString.toLowerCase().replace(/\s+/g, '');
   if (normalized.includes('restaurant') || normalized.includes('food')) return Category.RESTAURANT;
+    if (normalized.includes('ပဲအမျိုးမျိုး') || normalized.includes('ပဲ')) return Category.ပဲအမျိုးမျိုး;
+    if (normalized.includes('သစ်သီး') || normalized.includes('စတော်ဘယ်ရီ')) return Category.သစ်သီး;
+    if (normalized.includes('ကုန်စိမ်း') || normalized.includes('ငရုတ်သီး')) return Category.ကုန်စိမ်း;
   if (normalized.includes('mobile') || normalized.includes('phone')) return Category.MOBILE;
   if (normalized.includes('electron') || normalized.includes('electric')) return Category.ELECTRONICS;
   if (normalized.includes('cosmetic') || normalized.includes('beauty')) return Category.COSMETICS;

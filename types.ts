@@ -1,3 +1,4 @@
+
 export interface Business {
   id: string;
   name: string;
@@ -14,11 +15,25 @@ export interface Business {
   detail?: string;
 }
 
+export interface CartItem {
+  businessId: string;
+  businessName: string;
+  price: string;
+  imageUrl: string;
+  quantity: number;
+}
+
+export interface OrderInfo {
+  name: string;
+  phone: string;
+  address: string;
+}
+
 export enum Category {
   ALL = 'All',
-    ပဲအမျိုးမျိုး = 'ပဲအမျိုးမျိုး',
- သစ်သီး = 'သစ်သီး',
-  ကုန်စိမ်း = 'ကုန်စိမ်း',
+  BEANS = 'ပဲအမျိုးမျိုး',
+  FRUITS = 'သစ်သီး',
+  GROCERIES = 'ကုန်စိမ်း',
   RESTAURANT = 'Restaurant',
   MOBILE = 'Mobile Phone',
   ELECTRONICS = 'Electronics',

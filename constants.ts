@@ -1,3 +1,4 @@
+
 import { Business, Category } from './types';
 
 export const MOCK_BUSINESSES: Business[] = [

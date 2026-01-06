@@ -1,3 +1,4 @@
+
 import { Business, Category } from '../types';
 import { MOCK_BUSINESSES } from '../constants';
 
@@ -89,17 +90,22 @@ function getDirectImageUrl(url: string): string {
 function matchCategory(inputString: string): Category {
   if (!inputString) return Category.FASHION;
   const normalized = inputString.toLowerCase().replace(/\s+/g, '');
+  
+  // New specific categories
+  if (normalized.includes('ပဲ') || normalized.includes('bean')) return Category.BEANS;
+  if (normalized.includes('သစ်သီး') || normalized.includes('fruit')) return Category.FRUITS;
+  if (normalized.includes('ကုန်စိမ်း') || normalized.includes('vegetable') || normalized.includes('greens')) return Category.GROCERIES;
+  
+  // Original categories with updated Enum mappings
   if (normalized.includes('restaurant') || normalized.includes('food')) return Category.RESTAURANT;
-    if (normalized.includes('ပဲအမျိုးမျိုး') || normalized.includes('ပဲ')) return Category.ပဲအမျိုးမျိုး;
-    if (normalized.includes('သစ်သီး') || normalized.includes('စတော်ဘယ်ရီ')) return Category.သစ်သီး;
-    if (normalized.includes('ကုန်စိမ်း') || normalized.includes('ငရုတ်သီး')) return Category.ကုန်စိမ်း;
   if (normalized.includes('mobile') || normalized.includes('phone')) return Category.MOBILE;
   if (normalized.includes('electron') || normalized.includes('electric')) return Category.ELECTRONICS;
   if (normalized.includes('cosmetic') || normalized.includes('beauty')) return Category.COSMETICS;
   if (normalized.includes('baby') || normalized.includes('kid')) return Category.BABY;
   if (normalized.includes('furniture') || normalized.includes('sofa')) return Category.FURNITURE;
   if (normalized.includes('cloth') || normalized.includes('fashion') || normalized.includes('wear') || normalized.includes('dress')) return Category.FASHION;
-  if (normalized.includes('rice') || normalized.includes('oil') || normalized.includes('grocery') || normalized.includes('kitchen')) return Category.ESSENTIALS;
+  if (normalized.includes('rice') || normalized.includes('oil')) return Category.ESSENTIALS;
+  
   return Category.FASHION;
 }
 
